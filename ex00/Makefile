@@ -12,7 +12,7 @@ HEADER = Zombie.hpp
 
 all: $(NAME)
 
-$(NAME): $(HEADER) $(OBJS)
+$(NAME): $(OBJS) $(HEADER)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 	@echo "Compiled!"
 
