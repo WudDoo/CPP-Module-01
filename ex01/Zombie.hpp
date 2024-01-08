@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 18:39:16 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/08 17:18:26 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/01/08 17:22:36 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ class Zombie {
 		void	setName( std::string name );
 		void	announce( void );
 };
+
+Zombie*	zombieHorde( int N, std::string name );
 
 #endif
