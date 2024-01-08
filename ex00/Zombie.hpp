@@ -6,11 +6,14 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 18:39:16 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/05 18:55:51 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/01/08 16:54:21 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
+
+# include <iostream>
 
 class Zombie {
 	private:
@@ -20,6 +23,9 @@ class Zombie {
 		Zombie( std::string name );
 		~Zombie( void );
 		void	announce( void );
-		void	randomChump( std::string name );
-		Zombie*	newZombie( std::string name );
 };
+
+Zombie*	newZombie( std::string name );
+void	randomChump( std::string name );
+
+#endif

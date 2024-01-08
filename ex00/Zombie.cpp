@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 18:42:01 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/05 18:55:36 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/01/08 17:00:10 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Zombie::Zombie( std::string name ) {
 }
 
 Zombie::~Zombie( void ) {
-	std::cout << this->name << ": Desctructor was called" <<std::endl;
+	std::cout << "Zombie " << this->name << " has been destroyed" <<std::endl;
 }
 
 void	Zombie::announce( void ) {
