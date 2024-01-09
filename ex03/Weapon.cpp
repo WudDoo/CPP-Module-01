@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 17:06:39 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/09 17:42:08 by mortins-         ###   ########.fr       */
+/*   Created: 2024/01/09 17:11:33 by mortins-          #+#    #+#             */
+/*   Updated: 2024/01/09 17:42:03 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#include "Weapon.hpp"
 
-# include <iostream>
+Weapon::Weapon( std::string type ) {
+	this->setType(type);
+}
 
-class Weapon {
-	private:
-		std::string type;
+Weapon::~Weapon( void ) {	
+}
 
-	public:
-		Weapon( std::string type );
-		~Weapon( void );
+std::string& Weapon::getType( void ) {
+	std::string &typeREF = this->type;
+	
+	return(typeREF);
+}
 
-		std::string&	getType( void );
-		void	setType( std::string type);
-};
-
-#endif
+void	Weapon::setType( std::string type ) {
+	this->type = type;
+}
