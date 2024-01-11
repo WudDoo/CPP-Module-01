@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:34:11 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/11 15:06:16 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/01/11 15:09:27 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ HumanB::~HumanB( void ) {
 }
 
 void	HumanB::attack( void ) {
-	std::cout << this->name << " attacks with their " << weapon->getType() << std::endl;
+	if (!this->weapon)
+		std::cout << this->name << " is unarmed" << std::endl;
+	else
+		std::cout << this->name << " attacks with their " << weapon->getType() << std::endl;
 }
 
 void	HumanB::setWeapon( Weapon& weapon ) {
