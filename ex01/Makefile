@@ -21,7 +21,7 @@ $(OBJ_DIR)/%.o: %.cpp $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -rf $(OBJ_DIR) $(OBJS)
+	@rm -rf $(OBJS) $(OBJ_DIR)
 
 fclean: clean
 	@rm -rf $(NAME)
