@@ -16,7 +16,7 @@ $(NAME): $(OBJS) $(HEADER)
 	@$(CC) $(CFLAGS) $(OBJS) -o $@
 	@echo "Compiled!"
 
-$(OBJ_DIR)/%.o: %.cpp
+$(OBJ_DIR)/%.o: %.cpp $(HEADER)
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
