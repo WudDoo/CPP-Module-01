@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:34:11 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/11 14:57:38 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/01/11 15:06:16 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 HumanB::HumanB( std::string name) {
 	this->name = name;
+	//std::cout << "HumanB " << this->name << " constructed" << std::endl;
 }
 
 HumanB::~HumanB( void ) {
+	//std::cout << "HumanB " << this->name << " destructed" << std::endl;
 }
 
 void	HumanB::attack( void ) {
