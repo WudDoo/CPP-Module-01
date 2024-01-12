@@ -6,12 +6,26 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:14 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/11 17:44:57 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/01/12 14:25:54 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+
+std::string	replaceLine(std::string line, const std::string s1, const std::string s2) {
+	std::string	newLine;
+	int	pos = line.find(s1);
+
+	while (pos >= 0)
+	{
+		newLine = line.substr(0, pos) + s2 + line.substr(pos + s1.length(), -1);
+		pos = newLine.find(s1);
+		line = newLine;
+		newLine.clear();
+	}
+	return line;
+}
 
 int	main(int argc, char **argv)
 {
@@ -23,37 +37,34 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 
+	std::string oldString = argv[2];
+	if (oldString.empty())
+	{
+		std::cout << "Error: String1 must not be empty" << std::endl;
+		return (1);
+	}
+
 	std::ifstream oldFile(argv[1]);
+	if (!oldFile.good())
+	{
+		std::cout << "Error: Can't access file" << std::endl;
+		return (1);
+	}
+
 	std::string filename = argv[1];
 	filename += ".replace";
 	std::ofstream newFile(filename.c_str());
 
-	std::string oldString = argv[2];
-	std::string newString = argv[3];
-	std::string newLine;
 	std::string line;
-	int	subPos = 0;
-	int	pos = 0;
+	int	subPos;
 
 	while (getline(oldFile, line))
 	{
-		subPos = line.find(oldString);
-		pos = 0;
+		subPos = line.find(argv[2]);
 		if (subPos < 0)
 			newFile << line << std::endl;
 		else
-		{
-			newLine.clear();
-			while (subPos >= 0) //this while is working incorrectly
-			{
-				newLine += line.substr(pos, subPos) + newString;
-				subPos = line.find(oldString, newLine.length());
-				if (subPos >= 0)
-					pos = subPos + oldString.length();
-			}
-			newLine += line.substr(pos, -1);
-			newFile << newLine << std::endl;
-		}
+			newFile << replaceLine(line, argv[2], argv[3]) << std::endl;
 		subPos = 0;
 	}
 	newFile.close();
