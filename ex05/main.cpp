@@ -6,11 +6,12 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 15:15:23 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/12 15:18:42 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:49:22 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.cpp"
+#include <iostream>
+#include "Harl.hpp"
 
 int	main(void) {
 	Harl complainer;
