@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:05:19 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/12 16:14:28 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/01/16 14:20:41 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	main(int argc, char **argv)
 {
 	if (argc != 2)
 	{
-		std::cout << "Too many complaints" << std::endl;
+		std::cout << "Wrong number of arguments!" << std::endl;
+		std::cout << "Correct usage: ./harl <level>" << std::endl;
 		return (1);
 	}
 
@@ -36,10 +37,19 @@ int	main(int argc, char **argv)
 	switch (getIndex(argv[1])){
 		case 0:
 			complainer.complain("DEBUG");
+			complainer.complain("INFO");
+			complainer.complain("WARNING");
+			complainer.complain("ERROR");
+			break;
 		case 1:
 			complainer.complain("INFO");
+			complainer.complain("WARNING");
+			complainer.complain("ERROR");
+			break;
 		case 2:
 			complainer.complain("WARNING");
+			complainer.complain("ERROR");
+			break;
 		case 3:
 			complainer.complain("ERROR");
 			break;
