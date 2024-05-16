@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 18:39:16 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/09 17:44:43 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/16 16:41:05 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 # define ZOMBIE_HPP
 
 # include <iostream>
+# include <cstdlib>
 
 class Zombie {
 	private:
 		std::string	name;
-	
+
 	public:
 		Zombie( std::string name );
 		~Zombie( void );
