@@ -5,10 +5,10 @@ CFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
 OBJ_DIR = .obj
 
-SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp utils.cpp
+SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.cpp=%.o))
 
-HEADER = Zombie.hpp utils.hpp
+HEADER = Zombie.hpp
 
 all: $(NAME)
 
