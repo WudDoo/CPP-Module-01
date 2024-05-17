@@ -6,26 +6,17 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 17:52:09 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/09 16:23:17 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/17 18:00:44 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int	main(void) {
-	std::string	name;
-	int	N;
-	
-	std::cout << "Creating a zombie horde." << std::endl;
-	std::cout << "Number of zombies in the horde: ";
-	std::cin >> N;
-
-	std::cout << "Zombies name: ";
-	std::cin >> name;
-
 	Zombie *horde;
+	int	N = 6;
 
-	horde = zombieHorde(N, name);
+	horde = zombieHorde(N, "John Doe");
 	
 	for (int i = 0; i < N; i++) {
 		horde[i].announce();
