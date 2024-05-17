@@ -1,14 +1,14 @@
 NAME = zombie
 
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
 OBJ_DIR = .obj
 
-SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp utils.cpp
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.cpp=%.o))
 
-HEADER = Zombie.hpp
+HEADER = Zombie.hpp utils.hpp
 
 all: $(NAME)
 
