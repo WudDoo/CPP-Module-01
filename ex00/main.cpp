@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:20:23 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/17 17:58:47 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/17 18:11:14 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 int	main(void) {
 	std::string name;
+
+	std::cout << "Creating a nameless zombie in the stack." << std::endl << std::flush;
+	Zombie zombie;
+	zombie.announce();
 
 	std::cout << "Creating a zombie in the stack." << std::endl << std::flush;
 	Zombie zombie1("Zombie");
