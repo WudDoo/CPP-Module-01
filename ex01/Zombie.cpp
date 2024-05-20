@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 18:42:01 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/17 18:35:41 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:34:22 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void Zombie::setName( std::string name ) {
 }
 
 void	Zombie::announce( void ) {
-	std::cout << "\e[0;90m\e[47m" << this->name << "\e[0m: BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
