@@ -1,22 +1,34 @@
 NAME = notsed
 
 CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
-SRCS = main.cpp
+OBJ_DIR = .obj
+
+SRCS = main.cpp utils.cpp
+OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.cpp=%.o))
+
+HEADERS = utils.hpp
 
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJS) $(HEADERS)
+	@$(CC) $(CFLAGS) $(OBJS) -o $@
 	@echo "Compiled!"
 
+$(OBJ_DIR)/%.o: %.cpp $(HEADERS)
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
+	@rm -rf $(OBJS) $(OBJ_DIR)
+
+fclean: clean
 	@rm -rf $(NAME)
 
-re: clean all
+re: fclean all
 
 val: all
-	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME)
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME) test.txt " " "x"
 
 .PHONY: all clean fclean re val
