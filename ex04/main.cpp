@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:14 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/20 17:06:19 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/20 17:13:49 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,3 +46,8 @@ int	main(int argc, char **argv)
 	oldFile.close();
 	return (0);
 }
+
+// Test:
+// 	* Normal file
+// 	* Non existant file
+//	* Empty file
