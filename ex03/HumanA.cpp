@@ -6,14 +6,13 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 18:16:14 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/11 15:06:20 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/20 15:00:19 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA( std::string name, Weapon& weapon ) : weapon(weapon){
-	this->name = name;
+HumanA::HumanA( std::string _name, Weapon& _weapon ) : name(_name), weapon(_weapon){
 	//std::cout << "HumanA " << this->name << " constructed" << std::endl;
 }
 

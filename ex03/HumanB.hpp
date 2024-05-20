@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:32:11 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/11 14:54:54 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:57:59 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ class HumanB {
 		Weapon*	weapon;
 
 	public:
-		HumanB( std::string name);
+		HumanB( std::string _name);
 		~HumanB( void );
 
 		void	attack( void );
-		void	setWeapon( Weapon& weapon );
+		void	setWeapon( Weapon& _weapon );
 };
 
 #endif
