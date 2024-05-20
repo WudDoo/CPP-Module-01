@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 17:06:39 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/20 14:49:04 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/20 15:06:58 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ class Weapon {
 		std::string type;
 
 	public:
-		Weapon( std::string type );
+		Weapon( std::string _type );
 		~Weapon( void );
 
 		std::string const &	getType( void );
-		void	setType( std::string type);
+		void	setType( std::string _type);
 };
 
 #endif
