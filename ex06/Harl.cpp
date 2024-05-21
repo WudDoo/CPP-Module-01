@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:46:17 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 12:04:28 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:29:36 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,13 @@ void	Harl::complain( std::string level ) {
 	switch (i){
 		case 0:
 			debug();
+			std::cout << std::endl;
 		case 1:
 			info();
+			std::cout << std::endl;
 		case 2:
 			warning();
+			std::cout << std::endl;
 		case 3:
 			error();
 			break;
