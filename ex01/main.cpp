@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 17:52:09 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/20 14:33:47 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 12:59:52 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void) {
 	Zombie *horde;
-	int	N = 0;
+	int	N = 6;
 
 	horde = zombieHorde(N, "John Doe");
 
