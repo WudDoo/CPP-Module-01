@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:14 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 13:16:14 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:22:10 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	std::ifstream oldFile(argv[1]);
 	if (!oldFile.good())
 	{
-		std::cout << "Error: Can't access file" << std::endl;
+		std::cout << "\e[91mError: Can't access file\e[0m" << std::endl;
 		return (1);
 	}
 
