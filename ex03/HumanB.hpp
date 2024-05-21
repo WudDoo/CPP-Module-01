@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:32:11 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/20 14:57:59 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 13:06:46 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,17 @@ class HumanB {
 		Weapon*	weapon;
 
 	public:
+		// Constructor
 		HumanB( std::string _name);
+
+		// Destructor
 		~HumanB( void );
 
-		void	attack( void );
+		// Setter
 		void	setWeapon( Weapon& _weapon );
+
+		// Public member function
+		void	attack( void );
 };
 
 #endif
