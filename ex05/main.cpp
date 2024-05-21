@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 15:15:23 by mortins-          #+#    #+#             */
-/*   Updated: 2024/01/12 15:49:22 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 11:49:23 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 #include "Harl.hpp"
 
 int	main(void) {
-	Harl complainer;
+	Harl harl;
 
-	std::cout << "Harl DEBUG complain:" << std::endl;
-	complainer.complain("DEBUG");
+	std::cout << "> DEBUG complain:" << std::endl;
+	harl.complain("DEBUG");
 	std::cout << std::endl;
 
-	std::cout << "Harl INFO complain:" << std::endl;
-	complainer.complain("INFO");
+	std::cout << "> INFO complain:" << std::endl;
+	harl.complain("INFO");
 	std::cout << std::endl;
 
-	std::cout << "Harl WARNING complain:" << std::endl;
-	complainer.complain("WARNING");
+	std::cout << "> WARNING complain:" << std::endl;
+	harl.complain("WARNING");
 	std::cout << std::endl;
 
-	std::cout << "Harl ERROR complain:" << std::endl;
-	complainer.complain("ERROR");
+	std::cout << "> ERROR complain:" << std::endl;
+	harl.complain("ERROR");
 	std::cout << std::endl;
 
-	std::cout << "Harl SOMETHINGWRONG complain:" << std::endl;
-	complainer.complain("SOMETHINGWRONG");
+	std::cout << "> SOMETHINGWRONG complain:" << std::endl;
+	harl.complain("SOMETHINGWRONG");
 	std::cout << std::endl;
 }
