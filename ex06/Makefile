@@ -1,7 +1,7 @@
-NAME = harl
+NAME = harlFilter
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wimplicit-fallthrough=0 #-fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 
 OBJ_DIR = .obj
 
@@ -30,7 +30,16 @@ fclean: clean
 
 re: fclean all
 
+test: all
+	./$(NAME) DEBUG
+	./$(NAME) INFO
+	./$(NAME) WARNING
+	./$(NAME) ERROR
+	./$(NAME) WRONG
+	./$(NAME)
+	./$(NAME) DEBUG INFO WARNING ERROR WRONG
+
 val: all
 	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME)
 
-.PHONY: all clean fclean re val
+.PHONY: all clean fclean re val test
