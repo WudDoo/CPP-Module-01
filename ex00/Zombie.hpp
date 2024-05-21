@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 18:39:16 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 12:31:21 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 12:53:11 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Zombie {
 		// Destructor
 		~Zombie( void );
 
-		// Public member fucntion
+		// Public member function
 		void	announce( void );
 };
 
