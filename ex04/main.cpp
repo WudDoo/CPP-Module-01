@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:14 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 13:22:10 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:27:41 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,12 @@ int	main(int argc, char **argv)
 	std::ofstream newFile(filename.c_str());
 
 	std::string line;
-	int	subPos;
 
 	while (getline(oldFile, line))
 	{
-		subPos = line.find(argv[2]);
-		if (subPos < 0)
-			newFile << line << std::endl;
-		else
-			newFile << replaceLine(line, argv[2], argv[3]) << std::endl;
-		subPos = 0;
+		newFile << replaceLine(line, argv[2], argv[3]);
+		if (!oldFile.eof())
+			newFile << std::endl;
 	}
 	newFile.close();
 	oldFile.close();
