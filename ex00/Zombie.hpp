@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/05 18:39:16 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 12:54:33 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 15:41:34 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 class Zombie {
 	private:
-		std::string	name;
+		std::string	_name;
 
 	public:
 		// Constructors
 		Zombie( void );
-		Zombie( std::string _name );
+		Zombie( std::string name );
 
 		// Destructor
 		~Zombie( void );
