@@ -1,35 +1,9 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    test.txt                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/05 18:42:01 by mortins-          #+#    #+#              #
-#    Updated: 2024/05/20 15:50:12 by mortins-         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+1111
+1
+11
+22
+333
 
-#include "Zombie.hpp"
-
-Zombie::Zombie( void ) {
-	this->setName("nameless");
-	std::cout << "Zombie " << this->name << " has been constructed" <<std::endl;
-}
-
-Zombie::Zombie( std::string name ) {
-	this->setName(name);
-	std::cout << "Zombie " << this->name << " has been constructed" <<std::endl;
-}
-
-Zombie::~Zombie( void ) {
-	std::cout << "Zombie " << this->name << " has been destroyed" <<std::endl;
-}
-
-void Zombie::setName( std::string name ) {
-	this->name = name;
-}
-
-void	Zombie::announce( void ) {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+44
+1
+8

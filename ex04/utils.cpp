@@ -6,22 +6,21 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:44:14 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 13:23:04 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:19:58 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.hpp"
 
-std::string	replaceLine(std::string line, const std::string s1, const std::string s2) {
-	std::string	newLine;
-	int	pos = line.find(s1);
+std::string	replaceLine(std::string line, const std::string& oldString, const std::string& newString) {
+	int	pos = 0;
 
-	while (pos >= 0)
+	while (line.find(oldString, pos) != std::string::npos)
 	{
-		newLine = line.substr(0, pos) + s2 + line.substr(pos + s1.length(), -1);
-		pos = newLine.find(s1);
-		line = newLine;
-		newLine.clear();
+		pos = line.find(oldString, pos);
+		line.erase(pos, oldString.length());
+		line.insert(pos, newString);
+		pos += newString.length();
 	}
 	return line;
 }

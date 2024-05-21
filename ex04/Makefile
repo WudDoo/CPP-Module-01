@@ -29,6 +29,6 @@ fclean: clean
 re: fclean all
 
 val: all
-	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME) test.txt " " "x"
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME) test.txt "1" "11"
 
 .PHONY: all clean fclean re val
