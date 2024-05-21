@@ -3,15 +3,25 @@ NAME = brain
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address
 
+OBJ_DIR = .obj
+
 SRCS = main.cpp
+OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.cpp=%.o))
 
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJS)
+	@$(CC) $(CFLAGS) $(OBJS) -o $@
 	@echo "Compiled!"
 
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
+	@rm -rf $(OBJS) $(OBJ_DIR)
+
+fclean: clean
 	@rm -rf $(NAME)
 
 re: clean all
