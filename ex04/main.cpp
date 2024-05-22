@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:08:14 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 16:27:41 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:26:37 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,18 @@
 
 int	main(int argc, char **argv)
 {
-	if (hasErrors(argc, argv[2]))
+	if (argc != 4)
+	{
+		std::cout << "\e[91mWrong numbers of arguments!\e[0m" << std::endl;
+		std::cout << "Correct usage:" << std::endl;
+		std::cout << "\t./notsed <filename> <string1> <string2>" << std::endl;
 		return (1);
+	}
+	else if (argv[2][0] == '\0')
+	{
+		std::cout << "\e[91mError: String1 must not be empty\e[0m" << std::endl;
+		return (1);
+	}
 
 	std::ifstream oldFile(argv[1]);
 	if (!oldFile.good())
