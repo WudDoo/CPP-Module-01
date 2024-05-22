@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:46:17 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 16:29:36 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:32:26 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	Harl::complain( std::string level ) {
 			error();
 			break;
 		default:
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl << std::endl;
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 			break;
 	}
 }
