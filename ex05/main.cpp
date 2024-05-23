@@ -6,7 +6,7 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 15:15:23 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/21 12:00:57 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/23 12:30:26 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,4 @@ int	main(void) {
 
 	std::cout << "> SOMETHINGWRONG complain:" << std::endl;
 	complainer.complain("SOMETHINGWRONG");
-	std::cout << std::endl;
 }
