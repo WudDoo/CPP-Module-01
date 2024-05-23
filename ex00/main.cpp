@@ -6,15 +6,13 @@
 /*   By: mortins- <mortins-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:20:23 by mortins-          #+#    #+#             */
-/*   Updated: 2024/05/20 14:26:26 by mortins-         ###   ########.fr       */
+/*   Updated: 2024/05/23 12:10:57 by mortins-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int	main(void) {
-	std::string name;
-
 	std::cout << "\e[30m\e[47m>>\e[0m Creating a nameless zombie in the stack." << std::endl << std::flush;
 	Zombie zombie;
 	zombie.announce();
