@@ -30,21 +30,6 @@ fclean: clean
 
 re: fclean all
 
-test: all
-	./$(NAME) DEBUG
-	@echo ""
-	./$(NAME) INFO
-	@echo ""
-	./$(NAME) WARNING
-	@echo ""
-	./$(NAME) ERROR
-	@echo ""
-	./$(NAME) WRONG
-	@echo ""
-	./$(NAME)
-	@echo ""
-	./$(NAME) DEBUG INFO WARNING ERROR WRONG
-
 val: all
 	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes ./$(NAME) DEBUG
 
